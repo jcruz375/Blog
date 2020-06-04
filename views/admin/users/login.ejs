@@ -1,0 +1,27 @@
+<%- include('../../partials/header') %>
+<%- include('../../partials/homebar') %>
+
+<hr>
+<div class="mt-3 ml-4">
+    <h1>Login administrador</h1>
+</div>
+<hr>
+<div class="container mt-3">
+    <div class="card">
+        <div class="card-body">
+            <form method="POST" action="authenticate">
+                <input type="text" class="form-control" placeholder="E-mail@exemplo.com.br" name="email">
+                <br>
+                <input type="password" class="form-control" placeholder="****" name="password">
+                <br>
+                <button type="submit" class="btn btn-success btn-block">Entrar</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+<br>
+<hr>
+
+
+<%- include('../../partials/footer') %>

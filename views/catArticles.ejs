@@ -1,0 +1,23 @@
+<%- include('partials/header') %>
+
+<body>
+    <%- include('partials/homebar') %>
+    <hr>
+    
+    <div class="container">
+        <% articles.forEach(article => { %>
+            <div class="card">
+                <div class="card-header">
+                    <h2><%=article.title %></article></h2>
+                </div>
+                <div class="card-body">
+                    <a href="/articles/<%= article.slug %>"><button class="btn btn-success">Ler Artigo</button></a>
+                </div>
+            </div>
+            <br>
+        <% }) %>
+
+    </div>
+</body>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,33 @@
+<%- include('../../partials/header') %>
+
+<body>
+    <%- include('../../partials/navbar') %>
+
+    <div class="container">
+        <hr>
+        <div class="card">
+            <div class="card-header">
+                <h2>Editar categoria</h2>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="/categories/update" onsubmit="confirmDelete(event, this)">
+                    <input class="form-control" type="text" name="title" placeholder="Defina o titulo da categoria" value="<%= category.title %>">
+                    <br>
+                    <input type="hidden" value="<%= category.id %>" name="id">
+                    <button class="btn btn-primary">Atualizar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<%- include('../../partials/footer') %>
+
+<script>
+    function confirmDelete(event, form) {
+        event.preventDefault();
+        var decision = confirm('Deseja alterar esta categoria?');
+        if (decision) {
+            form.submit();
+        }
+    }
+</script>
