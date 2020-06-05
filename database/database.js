@@ -1,6 +1,6 @@
 const sequelize = require('sequelize');
-const connection = new sequelize('blogsql', 'j.cruz00', 'U.LiAS6DqSxM#sm', {
-    host: 'mysql669.umbler.com',
+const connection = new sequelize('blognode', 'root', '12345*', {
+    host: 'localhost',
     dialect: 'mysql',
     timezone: '-03:00'
 });

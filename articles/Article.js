@@ -22,4 +22,6 @@ const Article = connection.define('Articles',{
 Article.belongsTo(Category); //um artigo para uma categoria(pertence)
 Category.hasMany(Article);
 
+Article.sync({force: false})
+
 module.exports = Article;

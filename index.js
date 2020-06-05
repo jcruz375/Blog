@@ -111,7 +111,7 @@ app.use('/', usersController);
 
 //server
 
-app.listen(3000, (error) => {
+app.listen(2020, (error) => {
     if (error) {
         console.log(error, 'Server não iniciado');
     } else {
